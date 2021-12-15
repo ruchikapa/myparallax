@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+nav{
+    background: rgb(86, 185, 224);
+    height: 60px;
+    width: 100%;
+}
+
+nav ul{
+    float: right;
+    margin-right: 30px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 60px ;
+    margin: 0 10px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+    
+}
+
+nav ul li a:hover{
+    background: rgb(22, 145, 194);
+    border-radius: 20px ;
+    padding: 5px 11px;
+    transition: all .3s ease;
+}
+
+.logo{
+    color: whitesmoke;
+    font-size: 40px;
+    line-height: 60px;
+    padding: 0 100px;
+    font-weight: 800;
+}
+
+.logo span{
+    color: rgb(188, 221, 122);
+}
+
+.checkbtn{
+    font-size: 25px;
+    color: white;
+    float: right;
+    line-height: 60px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+body, html{
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+}
+
+.pimg1, .pimg2, .pimg3{
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.pimg1{
+    background-image: url(/images/bg1.jpg);
+    min-height: 80%;
+}
+
+.pimg2{
+    background-image: url(/images/bg2.jpg);
+    min-height: 400px;
+}
+
+.pimg3{
+    background-image: url(/images/bg3.jpg);
+    min-height: 400px;
+}
+
+.section{
+    text-align: center;
+    padding: 50px 80px;
+
+}
+.section-light{
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.section-dark{
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.section-medium{
+    background-color: #5b6774;
+    color: #ddd;
+}
+
+.ptext{
+    position: absolute;
+    top:50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border{
+    background: #282e34;
+    padding: 8px;
+    color: azure;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:952px){
+    .pimg1, .pimg2, .pimg3{
+        background-attachment: scroll;
+    }
+
+    .section{
+        text-align: center;
+    }
+
+    .ptext{
+        line-height: 50px;
+    }
+
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media(max-width:858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: gray;
+        top: 60px;
+        left: -100%;
+        text-align: center; 
+        transition: all .5s;
+    }
+
+    nav ul li{
+        display: block;
+        color: #ddd;
+    }
+
+    nav ul li a{
+        font-size: 18px;
+    }
+
+    nav ul li a:hover{
+        background: none;
+        color: rgb(241, 243, 242);
+        background-color: #ddd;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
